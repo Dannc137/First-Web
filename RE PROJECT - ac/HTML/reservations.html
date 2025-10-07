@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Reservation page</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/CSS/reservations.css'>
+     <link
+      href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="header">
+        <div class="headerContent">
+            <a href="/HTML/index.html" class="homebtn"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+            <!-- <button class="homebtn">⬅ Back to Home</button> -->
+            <h2>Make a Reservation</h2>
+        </div>
+    </header>
+     <section class="reservation">
+            <div class="reservationContent">
+                <div class="reservationHeader">
+                    <h1>Reserve Your Table</h1>
+                    <p>Experience authentic Italian cuisine in our warm and elegant atmosphere. Book your table now for an unforgettable dining experience.</p>
+                </div>
+                <div class="reservedeets">
+                    <div class="bothLayers">
+                        <form id="reservationForm" class="reservationForm">          
+                            <h3><i class="fa-regular fa-calendar"></i>Reservation Details</h3>
+                            <div class="namelayer">
+                                <div class="fullname">
+                                    <label for="name"><i class="fa-regular fa-user"></i>Full Name*</label>
+                                    <input type="text" id="name" name="name" placeholder="Your full name" required>
+                                </div>
+                                <div class="email">
+                                    <label for="email"><i class="fa-regular fa-envelope"></i>Email Address*</label>
+                                    <input type="email" id="email" name="email" placeholder="ligmaballs@gmail.com" required>
+                                </div>
+                            </div>
+                      
+                            <div class="phone">
+                                <label for="phone"><i class="fa-solid fa-phone"></i>Phone Number*</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+234 7061777823" required>
+                            </div>
+                            <div class="date">
+                                <label for="date"><i class="fa-regular fa-calendar"></i>Select Date*</label>
+                                <input type="date" id="date" name="date" class="dateinput" required>
+                            </div> 
+                      
+                            <div class="timeLayer">
+                                <div class="time">
+                                    <label for="time"><i class="fa-regular fa-clock"></i>Time*</label>
+                                    <input type="time" id="time" name="time" required>
+                                </div>
+                                <div class="guests">
+                                    <label for="guests"><i class="fa-solid fa-user-group"></i>Party Size*</label>
+                                    <select type="number" id="guests" name="guests" placeholder="Number of guests" required>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8+">8+</option>
+                                    </select>
+                                </div>         
+                            </div>
+                            <div class="requestLayer">
+                                <label for="">Special Requests</label>
+                                <input type="text" id="requests" name="requests" placeholder="E.g., dietary needs, seating preferences"> 
+                            </div>
+                            <div class="submitBtn">
+                                <button class="submitB" id="submitBtn" type="submit" onclick="submit(event)" >Book Now</button>
+                            </div>
+                        </form>
+                        <div class="leftside">
+                            <div class="otherinfo">
+                                <div class="restaurantinfo">
+                                    <div class="rinfoh">
+                                        <h3>Restaurant Information</h3>
+                                    </div>
+                                    <div class="hrs">
+                                        <h3>Hours of Operation</h3>
+                                    </div>
+                                    <div class="hourtable">
+                                        <div class="days">
+                                            <div class="dayMF">
+                                                <p>Monday - Friday</p><p class="times">11:00 AM - 10:00 PM</p>
+                                            </div>
+                                            <div class="dayMF">
+                                                <p>Saturday - Sunday</p><span><p class="times">4:00 PM - 9:00 PM</p>
+                                            </div>                                 
+                                        </div>
+                                    </div>
+                                    <div class="cinfo">
+                                        <h3>Contact information</h3>
+                                    </div>
+                                    <div class="phoneinfo">
+                                        <p><i class="fa-solid fa-phone"></i>+2342341534361</p>
+                                        <p><i class="fa-regular fa-envelope"></i>reservations@bellavista.com</p>
+                                        <p><i class="fa-solid fa-location-dot"></i>123 Main Street, Little Italy, Cityville ST 12345</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reservationPol">
+                                <h3>Reservation Policy</h3>                            
+                                    <ul>
+                                        <li>Reservations can be made up to 30 days in advance.</li>
+                                        <li>Tables are held for 15 minutes past reservation time.</li>
+                                        <li>For parties of 6 or more, please call directly.</li>
+                                        <li>Cancellations should be made at least 24 hours in advance.</li>
+                                        <li>We accommodate dietary restrictions with advance notice.</li>
+                                    </ul>
+                            </div>
+                            <div class="assist">
+                                <h3>Need immediate assistance?</h3>
+                                <p>Call us directly for same-day reservations or special requests</p>
+                                <button class="callbtn"><i class="fa-solid fa-solid fa-phone"></i>Call Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <script src='/reserve.js'></script>
+</body>
+</html>

@@ -1,0 +1,536 @@
+:root {
+    /* --medium-text : 18px */
+    --def-input-height: 23px;
+    --def-font-color: #666;
+    --small-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --container-radius: 10px;
+    --container-padding: 20px;
+    --container-border: 1px solid hsla(0, 0%, 40%, 0.255);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* border: 1px red solid; */
+}
+
+i{
+    /* margin: 2px ; */
+    margin-right: 5px;
+}
+
+body {
+     /* font-family: "Italiana"; */
+     font-family: "Epunda Slab", serif;
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+     scroll-behavior: smooth;
+}
+
+header{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    padding: 10px 20px;
+    /* color: white; */
+    border-bottom: 1px solid rgba(128, 128, 128, 0.182);
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color:  hsla(0, 0%, 0%, 0.532);
+    backdrop-filter: blur(10px);
+}
+
+.headerContent{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    color: white;
+    height: fit-content;
+}
+
+.homebtn{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 6px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.182);
+    color: white;
+    background-color: #f59e0b;
+    border-radius: 0.5rem;
+    /* padding-top: 3px; */
+    transition: 0.3s;
+}
+
+.homebtn:hover{
+    background-color: #d97706;
+    /* cursor: pointer; */
+}
+
+.headerContent h3{
+    font-size: 1.5rem;
+    font-weight: 100px;
+}
+
+.reservation{
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+}
+
+.reservationContent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(210, 17%, 98%);
+    /* justify-content: center; */
+    /* border: 1px solid red; */
+}
+
+.reservationHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    text-align: center;
+    /* top: 0;
+    position: fixed;
+    z-index: 1000; */
+}
+
+.reservationHeader h1{
+    font-size: 42px;
+    font-weight: 700;
+}
+
+.reservationHeader p{
+    font-size: 1.3rem;
+    color: #666;
+    padding: 0 420px;
+}
+
+.reservedeets{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0 350px;
+    flex-direction: row;
+    /* gap: 30px; */
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+
+.bothLayers{
+    width: 100%;
+    display: flex;
+    gap: 30px;
+}
+
+.reservationForm ,.leftside{
+    width: 50%;
+}
+
+.leftside{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.days{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dayMF{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+
+
+
+.reservationForm{
+    display: flex;
+    flex-direction: column;
+    border: var(--container-border);
+    padding: var(--container-padding);
+    gap: 15px;
+    border-radius: var(--container-radius);
+    box-shadow: var(--small-shadow);
+    background-color: white;
+    height: fit-content;
+    /* width: fit-content; */
+}
+
+.namelayer, .timeLayer{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: fit-content;
+    /* margin: 10px 0; */
+}
+
+.namelayer input{
+    width: 100%;
+    /* border: 1px green solid; */
+}
+
+.timeLayer input{
+    width: 100%;
+    /* border: 1px green solid; */
+}
+
+.fullname, .email, .time, .guests{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* border: 1px solid red; */
+    /* gap: 20px; */
+}
+
+/* .fullname, .email{
+    gap: 5px;
+} */
+
+.phone, .date, .fullname, .email{
+    /* gap: 5px; */
+}
+
+.phone, .date{
+    display: flex;
+    flex-direction: column;
+}
+
+.timeLayer{
+    display: flex;
+    flex-direction: row;
+}
+
+.time, .guests{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding: 0 10px;
+    font-size: 14px;
+    background-color: rgba(128, 128, 128, 0.099);
+    transition: all 0.2s ease-in-out; ;
+}
+
+select{
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    color: var(--def-font-color);
+    padding: 0 5px;
+    font-size: 15px;
+    background-color: rgba(128, 128, 128, 0.099);
+    transition: all 0.2s ease-in-out; ;
+}
+select:focus{
+    outline: 4px solid rgba(128, 128, 128, 0.296);
+}
+
+input:focus{
+    outline: 4px solid rgba(128, 128, 128, 0.296);
+    /* background-color: white; */
+}
+
+.dateinput{
+    background-color: white;
+    border: 1px solid rgba(128, 128, 128, 0.527);
+}
+
+label{
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.requestLayer{
+    display: flex;
+    flex-direction: column;
+}
+
+.otherinfo{
+    height: fit-content;
+    border: var(--container-border);
+    box-shadow: var(--small-shadow);
+    border-radius: var(--container-radius);
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: var(--container-padding); */
+}
+
+
+.rinfoh{
+    margin-bottom: 15px;
+}
+
+.requestLayer, .time, .guests, .fullname, .email, .phone, .date{
+    gap: 5px;
+}
+
+.requestLayer input{
+    height: 65px;
+}
+
+.restaurantinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    /* border: 1px solid orange; */
+    padding: var(--container-padding);
+}
+
+.submitBtn{
+    width: 100%;
+}
+
+.submitB{
+    width: 100%;
+    padding: 10px;
+    /* display: flex; */
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    font-size: 1rem;
+    /* font-weight: 500px; */
+    background-color: #f59e0b;
+    font-weight: 700;
+    /* margin-bottom: 5px; */
+}
+
+.submitB:hover{
+    background-color: #d97706;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.hourtable{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--def-font-color);
+}
+
+.phoneinfo{
+    color: var(--def-font-color);
+}
+
+.reservationPol{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: var(--container-padding);
+    border: var(--container-border);
+    box-shadow: var(--small-shadow);
+    border-radius: var(--container-radius);
+    background-color: white;
+}
+
+.reservationPol ul{
+    padding-left: 17px;
+    color: var(--def-font-color);
+    line-height: 1.6;
+}
+
+.assist{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: var(--container-padding);
+    border: var(--container-border);
+    box-shadow: var(--small-shadow);
+    border-radius: var(--container-radius);
+    background-color: white;
+    height: fit-content;
+    text-align: center;
+}
+
+.assist p{
+    color: var(--def-font-color);
+}
+
+.callbtn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f59e0b;
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.callbtn:hover{
+    color: black;
+    transition: 0.3s;
+}
+
+@media (max-width: 1080px){
+    *{
+        /* border: 1px solid red; */
+    }
+    body{
+        overflow-x: hidden;
+    }
+
+    
+    .days{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dayMF{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .reservationHeader p{
+        /* font-size: 1.3rem; */
+        padding: 0 250px;
+    }
+    .reservedeets{
+        width: 100%;
+        padding: 0 150px;
+        padding-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .bothLayers{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .reservationForm{
+        width: 100%;
+    }
+
+    .leftside{
+        width: 100%;
+    }
+
+    .reservedeets{
+        width: 100%;
+        display: flex; 
+        justify-content: center;
+        padding: 0 50px;
+        padding-bottom: 50px;
+    }
+
+    .namelayer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .timeLayer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time, .guests, .phone, .date, .fullname, .email{
+        width: 100%;
+    }
+    
+    .days{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dayMF{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .reservationContent{
+        height: 100%;
+        width: 100%;
+    }
+
+    .reservationHeader p{
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 415px){
+    body{
+        margin: 0;
+        padding: 0;
+    }
+
+    .homebtn{
+        padding: 3px 5px;
+    }
+
+    header{
+        width: 100%;
+        padding: 0;
+    }
+
+    .headerContent{
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .headerContent h2{
+        font-size: 1.6rem;
+    }
+
+    .reservedeets{
+         width: 100%;
+        padding: 0 20px;
+        padding-bottom: 50px;
+    }
+
+    
+    .reservationContent{
+        height: 100%;
+        width: 100%;
+    }
+
+    .reservationHeader p{
+        padding: 0 20px;
+    }
+}
